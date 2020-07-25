@@ -1,0 +1,37 @@
+.main{
+    margin-top: 60px;
+}
+.left, .right{
+    width: 25%;
+    float: left;
+    margin-right: 3%;
+}
+.middle{
+    width: 45%;
+    float: left;
+}
+#startGame{
+    margin-bottom: 15px;
+}
+.box1, .box2, .box3{
+    width: 30%;
+    
+    height: 248px;
+    float: left;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.stick1, .stick2, .stick3{
+    width: 10px;
+    height: 248px;
+    background-color: #331316;
+    float: left;
+    margin-left: 50%;
+}
+#one{
+    width: 100px;
+    height: 33px;
+    overflow: hidden;
+    border-radius: 57%;
+    background-color: crimson;
+}
