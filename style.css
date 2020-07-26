@@ -67,3 +67,20 @@
     justify-content: start;
     align-items: center;
 }
+
+.under-color{
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin-left: 20%;
+    border-radius: 3px;
+}
+.color-box1{
+    background-color: crimson;
+}
+.color-box2{
+    background-color: indigo;
+}
+.color-box3{
+    background-color: skyblue;
+}
