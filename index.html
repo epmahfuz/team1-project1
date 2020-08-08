@@ -1,70 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
-
-
+    <title>Stick Game</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <title>Wonderful Game</title>
 </head>
-
-<body class="container">
-    <div class="main">
-        <div class="left">
-            <button id="startGame" class="btn btn-primary">Start Game</button>
-            <div class="alert alert-success">
-                <strong>Success!</strong> Well Done.
+<body>
+        <div class="container">
+            <div class="game-result-container">
+                <button type="button" class="btn btn-primary">Start Game</button>
+                <button type="button" class="btn btn-danger">Game over! Please try again!</button>
+                <button type="button" class="btn btn-success">Success! Well done!</button>
             </div>
-            <div class="alert alert-danger">
-                <strong>Game Over!</strong> Please try again.
+            <div class="game-container">
+                 <div>
+                    <div class="stick1"></div>
+                    <div class="box1"></div>
+                 </div>
+                 <div>
+                    <div class="stick2"></div>
+                    <div class="box2"></div>
+                 </div>
+                 <div>
+                    <div class="stick3"></div>
+                    <div class="box3"></div>
+                 </div>
             </div>
+            <div class="timer"></div>
         </div>
-        <div class="middle">
-            <div class="box1">
-                <div class="stick1"></div>
-                <div class="under-color color-box1"></div>
-            </div>
-            <div class="box2">
-                <div class="stick2"></div>
-                <div class="under-color color-box2"></div>
-            </div>
-            <div class="box3">
-                <div class="stick3"></div>
-                <div class="under-color color-box3"></div>
-            </div>
-        </div>
-        <div class="right"></div>
-        <div id="one1"></div>
-        <div id="one2"></div>
-        <div id="one3"></div>
-        <div id="two1"></div>
-        <div id="two2"></div>
-        <div id="two3"></div>
-        <div id="three1"></div>
-        <div id="three2"></div>
-        <div id="three3"></div>
-    </div>
-    <script>
-        $(function () {
-            $("#one1").draggable();
-            $("#one2").draggable();
-            $("#one3").draggable();
-            $("#two1").draggable();
-            $("#two2").draggable();
-            $("#two3").draggable();
-            $("#three1").draggable();
-            $("#three2").draggable();
-            $("#three3").draggable();
-        });
-    </script>
-    <!-- <script src="./index.js"></script> -->
+        <script src="index.js"></script>
 </body>
-
 </html>

@@ -1,86 +1,86 @@
-.main {
-    margin-top: 60px;
-}
-.left,
-.right {
-    width: 25%;
-    float: left;
-    margin-right: 3%;
-}
-.middle {
-    width: 45%;
-    float: left;
-}
-#startGame {
-    margin-bottom: 15px;
-}
-.box1,
-.box2,
-.box3 {
-    width: 30%;
-
-    height: 248px;
-    float: left;
-    margin-left: 1px;
-    margin-right: 1px;
-}
-.stick1,
-.stick2,
-.stick3 {
-    width: 10px;
-    height: 248px;
-    background-color: #331316;
-    float: left;
-    margin-left: 50%;
-}
-#one1,
-#one2,
-#one3 {
-    width: 100px;
-    height: 33px;
-    overflow: hidden;
-    border-radius: 57%;
-    background-color: crimson;
-}
-#two1,
-#two2,
-#two3 {
-    width: 100px;
-    height: 33px;
-    overflow: hidden;
-    border-radius: 57%;
-    background-color: indigo;
-}
-#three1,
-#three2,
-#three3 {
-    width: 100px;
-    height: 33px;
-    overflow: hidden;
-    border-radius: 57%;
-    background-color: skyblue;
-}
-.disk {
-    height: auto;
-    width: 100%;
+.container{
     display: flex;
-    justify-content: start;
-    align-items: center;
+    margin: 10px;
+    padding: 10vh;
+    justify-content: space-between;
+    border: 2px solid #E7EDF1;
+    border-radius: 2px;
+    background: #fff;
 }
 
-.under-color{
-    width: 100px;
-    height: 40px;
-    float: left;
-    margin-left: 20%;
-    border-radius: 3px;
+.btn{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
-.color-box1{
-    background-color: crimson;
+
+.game-container{
+    display: flex;
+    justify-content: space-between;
 }
-.color-box2{
-    background-color: indigo;
+.btn-danger, .btn-success{
+    display: none;
 }
-.color-box3{
-    background-color: skyblue;
+.stick1 , .stick2 , .stick3{
+    position: relative;
+    left: 20px;
+    width: 50px;
+    height: 200px;
+    margin-right: 100px;
+    background-color: darkslategrey;
+    /* -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75); */
+}
+.box1 , .box2, .box3{
+     width: 100px;
+     height: 100px;
+     border-radius: 5px;
+     -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+     -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+     box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+}
+.box1{
+    background: coral;
+}
+.box2{
+    background: darkorchid;
+}
+.box3{
+    background: brown;
+}
+.timer{
+    width: 20px;
+    height: 20px;
+    font-size: 50px;
+    color: darkslategray;
+}
+.disk{
+    width: 50px;
+    height: 50px;
+    position: relative; 
+    /* left: -10px; */
+    top: 50px;
+    border-radius: 50%;
+    z-index: 100;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+}
+.coral{
+    background: coral;
+}
+.brown{
+    background: brown;
+}
+.darkorchid{
+    background: darkorchid;
+}
+.one{
+    width: 20px;
+    height: 20px;
+}
+.game-result-container{
+    width: 250px;
+    height: 200px;
 }
