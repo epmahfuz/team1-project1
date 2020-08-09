@@ -2,6 +2,7 @@ let coralStick1 = [];
 let darkorchidStick2 = [];
 let brownStick3 = [];
 let mapColor = [];
+let flag=0;
 
 $(".btn-primary").click(() => {
   $(".btn-danger").hide();
@@ -17,7 +18,10 @@ let startTimer = () => {
   let x = setInterval(function () {
     time -= 1;
     $(".timer").html(time.toString());
-    if (time == 0) {
+    if(flag===1){
+      clearInterval(x);
+    }
+    if (time == 0 && flag===0) {
       clearInterval(x);
       $(".btn-danger").show();
     }
@@ -33,6 +37,7 @@ let clearStick = () => {
   coralStick1.length = 0; 
   darkorchidStick2.length = 0; 
   brownStick3.length = 0; 
+  flag=0;
 };
 
 let random = () => {
@@ -300,6 +305,7 @@ let trackResult = () => {
   if (c != 3) result = 0;
   if(result==1){
      console.log("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+     flag=1;
      $(".btn-success").show();
   }
 };
