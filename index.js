@@ -184,6 +184,13 @@ let doRandom = () => {
 
     // },
     containment: ".game-container",
+    cursor: "grabbing",
+    opacity:0.8,
+    snap:true,
+    snapTolerance:10,
+  });
+  $(".disk").sortable({
+   
   });
 };
 
