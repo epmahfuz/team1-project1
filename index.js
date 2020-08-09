@@ -2,9 +2,14 @@ let coralStick1 = [];
 let darkorchidStick2 = [];
 let brownStick3 = [];
 let mapColor = [];
-let flag=0;
+let flag = 0;
+let time = 30;
+let x;
 
 $(".btn-primary").click(() => {
+  clearInterval(x);
+  let temp = $("#timeInput").val();
+  time = parseInt(temp);
   $(".btn-danger").hide();
   clearStick();
   doRandom();
@@ -13,15 +18,16 @@ $(".btn-primary").click(() => {
 });
 
 let startTimer = () => {
-  $(".timer").html("30");
-  let time = 30;
-  let x = setInterval(function () {
+  $(".timer").html(time.toString());
+  console.log(time);
+   x = setInterval(function () {
     time -= 1;
+    console.log(time);
     $(".timer").html(time.toString());
-    if(flag===1){
+    if (flag === 1) {
       clearInterval(x);
     }
-    if (time == 0 && flag===0) {
+    if (time == 0 && flag === 0) {
       clearInterval(x);
       $(".btn-danger").show();
     }
@@ -32,12 +38,12 @@ let clearStick = () => {
   $(".stick1").empty();
   $(".stick2").empty();
   $(".stick3").empty();
-  $(".btn-success").hide(); 
+  $(".btn-success").hide();
   $(".btn-danger").hide();
-  coralStick1.length = 0; 
-  darkorchidStick2.length = 0; 
-  brownStick3.length = 0; 
-  flag=0;
+  coralStick1.length = 0;
+  darkorchidStick2.length = 0;
+  brownStick3.length = 0;
+  flag = 0;
 };
 
 let random = () => {
@@ -169,24 +175,24 @@ let doRandom = () => {
     }
   }
   $(".disk").draggable({
-     revert: 'invalid' ,
+    revert: "invalid",
     // start: function( event, ui ) {
-   
+
     //   },
     // drag: function( event, ui ) {
-    
+
     // },
     // stop: function( event, ui ) {
-    
+
     // },
     containment: ".game-container",
   });
 };
 
-$(".stick1").droppable({ drop: Drop, accept : '.disk' });
-$(".stick2").droppable({ drop: Drop2, accept: '.disk' });
-$(".stick3").droppable({ drop: Drop3, accept: '.disk' });
-function Drop(event, ui) {  
+$(".stick1").droppable({ drop: Drop, accept: ".disk" });
+$(".stick2").droppable({ drop: Drop2, accept: ".disk" });
+$(".stick3").droppable({ drop: Drop3, accept: ".disk" });
+function Drop(event, ui) {
   let draggableId = ui.draggable.attr("id");
   let droppableId = $(this).attr("id");
   // console.log("drag ", draggableId, "drop ", droppableId);
@@ -195,12 +201,12 @@ function Drop(event, ui) {
   let fclass = classes.split(" ");
   // ui.draggable.parent().addClass("stick1");
   // ui.draggable.parent().removeClass(fclass[0]);
-//   console.log(
-//     "k ashce 1 number stick e => ",
-//     draggableId,
-//     " kun stick theke ashce => ",
-//     fclass[0]
-//   );
+  //   console.log(
+  //     "k ashce 1 number stick e => ",
+  //     draggableId,
+  //     " kun stick theke ashce => ",
+  //     fclass[0]
+  //   );
   // $(fclass[0]).remove(draggableId);
   let f = document.getElementById(draggableId);
   // f.parentElement.removeChild(f);
@@ -220,12 +226,12 @@ function Drop2(event, ui) {
   let fclass = classes.split(" ");
   // ui.draggable.parent().addClass("stick2");
   // ui.draggable.parent().removeClass(fclass[0]);
-//   console.log(
-//     "k ashce 2 number stick e => ",
-//     draggableId,
-//     " kun stick theke ashce => ",
-//     fclass[0]
-//   );
+  //   console.log(
+  //     "k ashce 2 number stick e => ",
+  //     draggableId,
+  //     " kun stick theke ashce => ",
+  //     fclass[0]
+  //   );
   move("darkorchid", parseInt(draggableId));
   trackResult();
 }
@@ -303,9 +309,9 @@ let trackResult = () => {
     }
   }
   if (c != 3) result = 0;
-  if(result==1){
-     console.log("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
-     flag=1;
-     $(".btn-success").show();
+  if (result == 1) {
+    console.log("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+    flag = 1;
+    $(".btn-success").show();
   }
 };
