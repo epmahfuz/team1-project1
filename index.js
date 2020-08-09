@@ -3,7 +3,7 @@ let darkorchidStick2 = [];
 let brownStick3 = [];
 let mapColor = [];
 let flag = 0;
-let time = 30;
+let time;
 let x;
 
 $(".btn-primary").click(() => {
@@ -19,10 +19,8 @@ $(".btn-primary").click(() => {
 
 let startTimer = () => {
   $(".timer").html(time.toString());
-  console.log(time);
    x = setInterval(function () {
     time -= 1;
-    console.log(time);
     $(".timer").html(time.toString());
     if (flag === 1) {
       clearInterval(x);
